@@ -1,0 +1,24 @@
+.tree {
+	position: absolute;
+	height: 100vh;
+	margin-left: -100px;
+}
+
+#man {
+	bottom: 0px;
+	z-index: -1;
+}
+
+#plane {
+	bottom: 0px;
+	width:1000px;
+	position: absolute;
+	z-index: -2;
+	visibility: hidden;
+}
+
+@media (max-width: 8.5in){
+	#plane {
+		visibility: visible;
+	}
+}

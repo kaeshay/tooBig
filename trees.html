@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>too big</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="styles/reset.css">
+	<link rel="stylesheet" href="styles/trees.css">
+<!-- 	<link rel="stylesheet" href="styles/debug.css"> -->
+	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+</head>
+<body>
+	<img id="plane" src="images/trees/plane.png">
+</body>
+	<script>
+		for (var i = 0; i<7; i++){
+			var tree1 = document.createElement("img")
+			var tree2 = document.createElement("img")
+			var tree3 = document.createElement("img")
+			var tree4 = document.createElement("img")
+			plantTree(tree1, "tree1", i, 250);
+			plantTree(tree2, "tree2", i, 240);
+			plantTree(tree3, "tree3", i, 200);
+			plantTree(tree4, "tree4", i, 200);
+			document.body.append(tree1, tree2, tree3, tree4);
+		}
+
+		function plantTree(tree, treeString, i, gap){
+			tree.src = "images/trees/" + treeString + ".png";
+			tree.setAttribute("class", "tree foreground");
+			tree.setAttribute("style", "left:"+i*gap+"px; z-index:" + getRandomInt(4));
+		}
+
+		function getRandomInt(max){
+			return Math.floor(Math.random() * Math.floor(max));
+		}
+	</script>
+	<script type="text/javascript" src="scripts/mouse.js"></script>
+</html>

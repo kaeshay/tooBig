@@ -1,0 +1,15 @@
+/* browsers set their own properties, reset.css helps us start on a blank slate */
+
+/* root = the root of our tree = html, define a font for our entire html */
+:root { font: 20px/1.2 "Roboto", sans-serif; }
+
+body,
+/* change all of body's element*/
+body * {
+	margin:			unset;
+	box-sizing:		unset;
+	padding:		unset;
+	font-size:		unset;
+	color:			unset;
+	text-decoration:unset;
+}

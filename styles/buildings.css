@@ -1,0 +1,61 @@
+#cityscape {
+	position: absolute;
+	bottom: 0px;
+	width: 100vw;
+}
+
+#man{
+	bottom:-20px;
+	left: 50vw;
+}
+.scrollable {
+	overflow: auto;
+	height: 400px;
+	position: absolute;
+	bottom: 10px;
+}
+
+.scrollable::-webkit-scrollbar { 
+    display: none; 
+}
+
+.building {
+	width: 50vw;
+}
+
+#building1{
+	left:-30px;
+}
+#building2{
+	left:200px;
+}
+#building3{
+	left:500px;
+}
+#building4{
+	left:700px;
+}
+
+@media (max-width: 8.5in){
+	body{
+		overflow: hidden;
+	}
+	.scrollable {
+		bottom: -100px;
+		z-index: -1;
+	}
+	#building1{
+		left:-30px;
+	}
+	#building2{
+		left:50px;
+	}
+	#building3{
+		left:170px;
+		bottom:-200px;
+	}
+	#building4{
+		left:300px;
+		bottom:-200px;
+	}
+}
